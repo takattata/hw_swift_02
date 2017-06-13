@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0kM-9T-ldm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--都道府県-->
+        <scene sceneID="C7m-oa-fzG">
+            <objects>
+                <viewController title="都道府県" id="0kM-9T-ldm" customClass="InitialViewController" customModule="hw_02" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f1B-rB-qba"/>
+                        <viewControllerLayoutGuide type="bottom" id="8ev-lA-Tq8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bkf-GK-wRb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yft-V1-Wip">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yft-V1-Wip" secondAttribute="trailing" id="8PZ-lE-Ewk"/>
+                            <constraint firstItem="8ev-lA-Tq8" firstAttribute="top" secondItem="yft-V1-Wip" secondAttribute="bottom" id="QPH-cK-n15"/>
+                            <constraint firstItem="yft-V1-Wip" firstAttribute="leading" secondItem="Bkf-GK-wRb" secondAttribute="leading" id="XN0-Xh-u98"/>
+                            <constraint firstItem="yft-V1-Wip" firstAttribute="top" secondItem="f1B-rB-qba" secondAttribute="bottom" id="g0e-oI-SrV"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="tableView" destination="yft-V1-Wip" id="3WW-xm-2YJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4qk-lf-wDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-193" y="-25"/>
+        </scene>
+    </scenes>
+</document>

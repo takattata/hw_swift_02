@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lhz-em-hD1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="9zu-jZ-tE7">
+            <objects>
+                <viewController id="lhz-em-hD1" customClass="WeatherViewController" customModule="hw_02" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lJb-44-3Yj"/>
+                        <viewControllerLayoutGuide type="bottom" id="QnV-yS-cE5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cw9-hq-VGD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nct-9B-zY7">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ForecastCell" rowHeight="367" id="eRH-C4-UqM" userLabel="WeatherForecastCell" customClass="ForecastCell" customModule="hw_02" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="367"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eRH-C4-UqM" id="6aU-Vd-zWd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="366.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlertCell" rowHeight="46" id="4DS-6W-yUI" userLabel="WeatherAlertCell" customClass="AlertCell" customModule="hw_02" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="395" width="375" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4DS-6W-yUI" id="Qes-IJ-qwQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jv-dn-LJs" customClass="SystemButton" customModule="hw_02" customModuleProvider="target">
+                                                    <rect key="frame" x="127" y="7" width="120" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="qp9-3c-w7R"/>
+                                                    </constraints>
+                                                    <state key="normal" title="アラート"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0Jv-dn-LJs" firstAttribute="centerX" secondItem="Qes-IJ-qwQ" secondAttribute="centerX" id="0Oy-UG-8Oy"/>
+                                                <constraint firstItem="0Jv-dn-LJs" firstAttribute="centerY" secondItem="Qes-IJ-qwQ" secondAttribute="centerY" id="uAp-XC-5lc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="alertButton" destination="0Jv-dn-LJs" id="nIM-bA-omo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nct-9B-zY7" firstAttribute="leading" secondItem="Cw9-hq-VGD" secondAttribute="leading" id="4IH-mh-Tbg"/>
+                            <constraint firstItem="Nct-9B-zY7" firstAttribute="top" secondItem="lJb-44-3Yj" secondAttribute="bottom" id="Alb-Eg-VNB"/>
+                            <constraint firstAttribute="trailing" secondItem="Nct-9B-zY7" secondAttribute="trailing" id="E2v-rx-Q10"/>
+                            <constraint firstItem="Nct-9B-zY7" firstAttribute="leading" secondItem="Cw9-hq-VGD" secondAttribute="leading" id="Nyb-GD-tuL"/>
+                            <constraint firstItem="Nct-9B-zY7" firstAttribute="top" secondItem="lJb-44-3Yj" secondAttribute="bottom" id="TNN-Qf-Xkz"/>
+                            <constraint firstAttribute="trailing" secondItem="Nct-9B-zY7" secondAttribute="trailing" id="h3r-VW-4GM"/>
+                            <constraint firstItem="QnV-yS-cE5" firstAttribute="top" secondItem="Nct-9B-zY7" secondAttribute="bottom" id="x8x-mP-vdD"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="tableView" destination="Nct-9B-zY7" id="3jg-ti-hP5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ers-Fs-ZkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.80000000000001" y="70.614692653673174"/>
+        </scene>
+    </scenes>
+</document>
